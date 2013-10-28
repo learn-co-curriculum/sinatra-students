@@ -10,5 +10,6 @@
 # http://sequel.rubyforge.org/rdoc/classes/Sequel/Dataset.html
 
 class Student < Sequel::Model
-  
+  # attr_accessor :name, :profile_image, :background_image, :social_media, :twitter, :linkedin, :github, :quote, :bio, :work, :work_title, :education
+  # attr_reader :id
 end
