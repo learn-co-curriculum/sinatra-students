@@ -98,24 +98,33 @@
             <ul>
 
                <!-- Begin Student -->
+              <% @students.each do |student| %>
+              <% link_name = student[:name].downcase.gsub!(' ','_')  %>           
+              <li class="home-blog-post">
+                <div class="blog-thumb">
+                  <a href="<%= "/students/#{link_name}" %>">
+                    <img width="304" height="304" class="prof-image" src="<%= student[:index_photo] %>" class="attachment-blog-thumb wp-post-image" alt="<%= student[:name] %>">
+                    
+                  </a>
+                </div>
 
+                <div class="blog-title">
+                  <div class="big-comment">
+                    <h3>
+                      <a href="<%= "/students/#{link_name}" %>"><%= student[:name] %></a>
+                    </h3>
+                  </div>
+                  <p class="home-blog-post-meta"><%= student[:index_tagline] %></p>
+                </div>
+                <div class="clear"></div>
 
-
-
-<% @students.each do |s| %>
-  <p><%= s.name %></p>
-<% end %>
-
-
-
-
-
-
-
-
-
-
-              <!-- End Student --> 
+                <div class="excerpt">
+                  <p><%= student[:index_description] %></p>
+                </div>
+                <div class="clear"></div>
+              </li>
+              <% end %>
+              <!-- End Student -->
 
             </ul>
           </div>

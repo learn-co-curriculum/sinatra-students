@@ -95,8 +95,8 @@ class StudentScraper
       # http://sequel.rubyforge.org/rdoc/classes/Sequel/Model/ClassMethods.html#method-i-find_or_create
       student = Student.find_or_create(:name => name)
 
-      student.profile_image = parse_profile_image(student_page)
-      student.background_image = parse_background_image(student_page)
+      student.profile_image     = normalize_image_path(parse_profile_image(student_page))
+      student.background_image  = normalize_image_path(parse_background_image(student_page))
       social_media              = parse_social_media(student_page)
       student.twitter           = social_media[0]
       student.linkedin          = social_media[1]
@@ -109,7 +109,7 @@ class StudentScraper
       student.index_tagline     = index_tagline
       student.index_description = index_description
       student.index_photo       = normalize_image_path(index_photo)
-      
+    
       puts "Saving student ##{student.id} (#{student.name})..." if student.save
       student
    end
