@@ -28,20 +28,21 @@ before "deploy:restart", "deploy:symlink_database"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
- task :symlink_database, :roles => :app do
-  run "ln -nfs #{shared_path}/students-production.db #{current_path}/db/students-production.db"
- end
+  task :symlink_database, :roles => :app do
+    run "ln -nfs #{shared_path}/students-production.db #{current_path}/db/students-production.db"
+  end
 
- task :migrate, :roles => :app do 
-  run "cd #{current_path} && rake db:migrate RACK_ENV=production"
- end
+  task :migrate, :roles => :app do 
+    run "cd #{current_path} && rake db:migrate RACK_ENV=production"
+  end
 
- task :scrape_students, :roles => :app do
-  run "cd #{current_path} && rake scrape_students RACK_ENV=production"
- end
- task :start do ; end
- task :stop do ; end
- task :restart, :roles => :app, :except => { :no_release => true } do
-   run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
- end
+  task :scrape_students, :roles => :app do
+    run "cd #{current_path} && rake scrape_students RACK_ENV=production"
+  end
+ 
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
 end
