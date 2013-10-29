@@ -24,7 +24,7 @@ Bundler.require(:default, ENV['RACK_ENV'])
 
 # Establish our Database connection.
 DB = Sequel.connect("sqlite://db/students-#{ENV['RACK_ENV']}.db")
-
+require_relative "../app/controllers/application_controller"
 # Load our models, concerns, and controllers
 def load_dirs(array)
   array.each do |dir|

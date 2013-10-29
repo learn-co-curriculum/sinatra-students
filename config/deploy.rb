@@ -1,10 +1,11 @@
 require 'bundler/capistrano' # for bundler support
 
 set :application, "studentbody"
-set :repository,  "https://github.com/mikespangler/sinatra-students-ruby-003.git"
+set :repository,  "git@github.com:mikespangler/sinatra-students-ruby-003.git"
 
-set :user, 'mikespangler'
-set :deploy_to, "/home/#{ user }/#{ application }"
+set :user, 'spangler'
+#set :scm_passphrase, ""
+set :deploy_to, "/home/#{user}/#{application}"
 set :use_sudo, false
 
 set :scm, :git
