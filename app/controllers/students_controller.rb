@@ -19,7 +19,8 @@ class StudentsController < ApplicationController
 
   # POST '/students'
   post '/students' do
-    student = Student.create(params[:student])
+    student = Student.new(params[:student])
+    student.save
     redirect "/students/#{student.slug}"
   end
 

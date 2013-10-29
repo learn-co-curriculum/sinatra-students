@@ -21,4 +21,5 @@ group :test do
   gem 'terminal-notifier-guard'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'factory_girl'
 end

@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 describe StudentsController do
   # student will be a new, unsaved student.
-  let(:student){Student.new(:name => "Flatiron Student")}
+  let(:student){build(:student)}
 
   # Every route should be within it's own context.
   context 'GET /' do
@@ -62,7 +62,9 @@ describe StudentsController do
 
     before do
       # How to mock the student here?
-      # Student.should_receive(:new).with(params[:student])
+      student = build_stubbed(:student)
+      student.stub(:save)
+      Student.should_receive(:new).with(params[:student]).and_return(student)
       post '/students', params
     end
 
