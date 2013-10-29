@@ -1,3 +1,4 @@
+
 # This file will load our environment.
 
 # It's goals are:
@@ -23,12 +24,12 @@ Bundler.require(:default, ENV['RACK_ENV'])
 
 # Establish our Database connection.
 DB = Sequel.connect("sqlite://db/students-#{ENV['RACK_ENV']}.db")
-
+require_relative "../app/controllers/application_controller"
 # Load our models, concerns, and controllers
 def load_dirs(array)
   array.each do |dir|
     Dir.entries(dir).each do |file|
-      next if file.start_with?(".")
+      next if file.start_with?(".") || if file == "application_controller.rb"
       require_relative "../#{dir}/#{file}"
     end
   end

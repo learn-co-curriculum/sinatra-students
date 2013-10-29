@@ -22,6 +22,19 @@ Sequel.migration do
     create_table(:students) do
       primary_key :id
       String :name, :null=>false
+      String :profile_image
+      String :background_image
+      String :twitter
+      String :linkedin
+      String :github
+      String :quote
+      String :bio
+      String :work
+      String :work_title
+      String :education
+      String :index_tagline
+      String :index_description
+      String :index_photo
     end
   end
 
