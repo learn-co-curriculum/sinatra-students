@@ -29,7 +29,7 @@ require_relative "../app/controllers/application_controller"
 def load_dirs(array)
   array.each do |dir|
     Dir.entries(dir).each do |file|
-      next if file.start_with?(".")
+      next if file.start_with?(".") || if file == "application_controller.rb"
       require_relative "../#{dir}/#{file}"
     end
   end
