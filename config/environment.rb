@@ -36,4 +36,4 @@ end
 
 require_relative '../app/controllers/application_controller.rb'
 
-load_dirs(['app/concerns', 'app/models', 'app/controllers'])
+load_dirs(['app/models', 'app/controllers'])

@@ -1,0 +1,39 @@
+<h1>Edit Student</h1>
+
+<img width="304" height="304" class="prof-image"
+
+ <% if @student.profile_image.nil? || @student.profile_image.include?("student_name_profile") %>
+      src="http://www.blogenka.com/wp-content/uploads/2012/05/476464-cookie-monster.jpg"
+ <% elsif @student.profile_image.include?('img/') %>
+      src="/<%= @student.profile_image %>"
+ <% elsif @student.profile_image.include?('http') %>
+      src="<%= @student.profile_image %>"
+ <% else %>
+      src="/img/<%= @student.profile_image %>" 
+ <% end %>
+      class="attachment-blog-thumb wp-post-image" alt="student_name"><br>
+
+<a href="/upload/<%= @student.slug %>">Change Your Photo</a>
+
+<form action="/students/<%= @student.slug %>" method="post" id="edit_student">
+  <label for="name">Name</label>
+  <input type="text" name="student[name]" value="<%= @student.name %>"><br>
+  <label for="twitter">Twitter</label>
+  <input type="text" name="student[twitter]" value="<%= @student.twitter %>" ><br>
+  <label for="linkedin">LinkedIn</label>
+  <input type="text" name="student[linkedin]" value="<%= @student.linkedin %>" ><br>
+  <label for="github">GitHub</label>
+  <input type="text" name="student[github]" value="<%= @student.github %>"><br>
+  <label for="bio">Bio</label><br>
+  <textarea cols="80" rows="4" name="student[bio]"><%= @student.bio %></textarea><br>
+  <label for="work">Work</label><br>
+  <textarea cols="80" rows="4" name="student[work]"><%= @student.work %></textarea><br>
+  <label for="work_title">Work Title</label><br>
+  <textarea cols="80" rows="4" name="student[work_title]"><%= @student.work_title %></textarea><br>
+  <label for="education">Education</label><br>
+  <textarea cols="80" rows="4" name="student[education]"><%= @student.education %></textarea><br>
+  <label for="quote">Quote</label><br>
+  <textarea cols="80" rows="3" name="student[quote]"><%= @student.quote %></textarea><br>
+
+  <input class="button" type="submit" value="Update Student"><a class="button" href="/">Cancel</a>
+</form>

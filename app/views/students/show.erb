@@ -1,0 +1,211 @@
+<!-- Begin Splash Image -->
+<div class="top-page-title"> 
+  <div>
+    <img class="prof-image"
+      <% if @student.profile_image.nil? || @student.profile_image.include?("student_name_profile") %>
+        src="http://www.blogenka.com/wp-content/uploads/2012/05/476464-cookie-monster.jpg"
+      <% elsif @student.profile_image.include?('img/students') || @student.profile_image.include?('http') %>
+        src="<%= @student.profile_image %>"
+      <% else %>
+        src="/img/<%= @student.profile_image %>" 
+      <% end %>
+        class="student_pic">
+  </div>
+</div>
+<! -- End Splash Image -->
+
+<!-- Begin Title Content -->
+<div class="page-title">
+  <h4 class="ib_main_header"><%= @student.name %></h4>
+  <div class="social-icons">
+    <a href=<%= @student.twitter %>><i class="icon-twitter ib-social-icons"></i></a>
+    <a href=<%= @student.linkedin %>><i class="icon-linkedin-sign ib-social-icons"></i></a>
+    <a href=<%= @student.github %>><i class="icon-github ib-social-icons"></i></a>
+    <a href="#"><i class="icon-rss ib-social-icons"></i></a>
+  </div>
+
+  <div class="section section-testimonials-curriculum quote-div">
+    <div id="testimonial-slider" class="flexslider">
+      <ul class="testimonials slides">
+        <li id="text-7" class="widget_text" style="list-style: none; display: list-item;">
+          <div class="textwidget">
+            <h3><%= @student.quote %></h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End Title Content -->
+
+<!-- Some Content on Full Width -->
+<div id="random-full-width-content" class="this-div-is-just-a-helpful-container">
+  <div id="scroll-about" class="section section-services">
+    <div class="section-title">
+      <span class="actual-title">About</span>
+      <div class="go-to-top"><a href="#scroll-header">Go To Top</a></div>
+    </div>
+
+    <div class="services-wrap" id="equalize">
+
+      <div id="ok-text-column-2" class="column ok-text-column" >
+        <div class="services">
+          <div class="services-title"><h3>Biography</h3></div>
+          <div class="clear"></div>
+          <p><%= @student.bio %>
+
+          </p>
+        </div>
+      </div>
+
+      <div id="ok-text-column-3" class="column ok-text-column" style="height: 204px;">
+        <div class="services">
+          <div class="services-title"><h3>Education</h3></div>
+          <div class="clear"></div>
+          <ul>
+            <%= @student.education %>
+          </ul>
+        </div>
+      </div>
+
+      <div id="ok-text-column-4" class="column ok-text-column" style="height: 204px;">
+        <div class="services">
+          <div class="services-title"><h3>Work</h3></div>
+          <div class="clear"></div>
+          
+          <p><%= @student.work %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="random-full-width-content" class="this-div-is-just-a-helpful-container">
+      <div class="section section-services">
+        <div id="scroll-coder-cred" class="section-title">
+          <span class="actual-title">Coder Cred</span>
+          <div class="go-to-top"><a href="#scroll-header">Go To Top</a></div>
+        </div>
+
+        <div class="services-wrap section coder-cred" id="equalize">
+
+          <div class="column fourth">
+            <a href=<%= @student.github %> target="_blank"><img src="../img/github.png" alt="GitHub" width="130px"></a>
+          </div>
+
+          <div class="column fourth">
+            <a href=<%=  %> target="_blank"><img src="../img/treehouse.png" alt="Treehouse" width="130px"></a>
+          </div>
+
+          <div class="column fourth">
+            <a href=<%=  %> target="_blank"><img src="../img/codeschool.jpg" alt="Code School" width="130"></a>
+          </div>
+
+          <div class="column fourth">
+            <a href=<%=  %> target="_blank"><img src="../img/coderwall.png" alt="Coder Wall" width="130"></a>
+          </div>
+        </div>
+        <! -- End Service -->
+      </div>
+      <! -- End Coder Cred -->
+    </div>
+
+    <div id="random-full-width-content" class="this-div-is-just-a-helpful-container">
+      <div id="scroll-recently" class="section section-services">
+        <div class="section-title">
+          <span class="actual-title">Recently</span>
+          <div class="go-to-top"><a href="#scroll-header">Go To Top</a></div>
+        </div>
+
+        <div class="services-wrap" id="equalize">
+          <div id="ok-text-column-2" class="column ok-text-column" style="height: 204px;">
+            <div class="services">
+              <div class="services-title">
+                <h3>Coding Profiles</h3>
+              </div>
+              <div class="clear"></div>
+              <p>
+                - <a href=<%=  %>>Code School</a><br>
+                - <a href=<%=  %>>Treehouse</a><br>
+                - <a href=<%=  %>>Codecademy</a><br>
+                - <a href=<%=  %>>Coder Wall</a><br>
+              </p>
+            </div>
+          </div>
+
+          <div id="ok-text-column-3" class="column ok-text-column" style="height: 204px;">
+            <div class="services">
+              <div class="services-title">
+                <h3>Blogs</h3>
+              </div>
+              <div class="clear"></div>
+              <p>
+               
+              </p>
+            </div>
+          </div>
+
+          <div id="ok-text-column-4" class="column ok-text-column" style="height: 204px;">
+            <div class="services">
+              <div class="services-title">
+                <h3>Personal Projects</h3>
+              </div>
+              <div class="clear"></div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="random-full-width-content" class="this-div-is-just-a-helpful-container">
+      <div id="scroll-favorites" class="section section-services">
+        <div class="section-title">
+          <span class="actual-title">Favorites</span>
+          <div class="go-to-top"><a href="#scroll-header">Go To Top</a></div>
+        </div>
+
+        <div class="services-wrap" id="equalize">
+          <div id="ok-text-column-2" class="column ok-text-column" style="height: 204px;">
+            <div class="services">
+              <div class="services-title">
+                <h3>Favorite Cities</h3>
+              </div>
+              <div class="clear"></div>
+              <p>
+                <!-- inserted another loop -->
+                
+              </p>
+            </div>
+          </div>
+
+          <div id="ok-text-column-3" class="column ok-text-column" style="height: 204px;">
+            <div class="services">
+              <div class="services-title"><h3>Favorites</h3>
+            </div>
+            <div class="clear"></div>
+            <p>
+              - Favorite Website: <a href="#"><%=  %></a><br>
+              - Favorite Comic: <a href="#"><%=  %></a><br>
+              - Favorite Radio Program: <a href="#"><%=  %></a><br>
+            </p>
+          </div>
+        </div>
+
+        <div id="ok-text-column-4" class="column ok-text-column" style="height: 204px;">
+          <div class="services">
+            <div class="services-title">
+              <h3>Flatiron School Projects</h3>
+            </div>
+            <div class="clear"></div>
+            <p><%=  %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<!-- End Footer Widgets -->
