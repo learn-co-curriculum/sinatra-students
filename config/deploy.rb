@@ -4,7 +4,7 @@ set :application, "studentbody"
 set :repository,  "git@github.com:mikespangler/sinatra-students-ruby-003.git"
 
 set :user, 'spangler'
-#set :scm_passphrase, ""
+# set :scm_passphrase, ""
 set :deploy_to, "/home/#{user}/#{application}"
 set :use_sudo, false
 

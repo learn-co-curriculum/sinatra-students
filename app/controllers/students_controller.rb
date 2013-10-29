@@ -1,8 +1,6 @@
 # StudentsController inherits from ApplicationController
 # so any settings defined there will apply to this controller.
-
-
-vhlsjfklsjdflkj
+kdjglkjd/lkgjd;fkl
 require_relative "application_controller"
 class StudentsController < ApplicationController
 
