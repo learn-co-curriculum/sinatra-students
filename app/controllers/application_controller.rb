@@ -11,6 +11,6 @@ class ApplicationController < Sinatra::Base
   # See the example in students_controller.rb, get '/'.
   set :views, Proc.new { File.join(root, "../views") }
   
-  register Sinatra::ActiveRecordExtension
+  # register Sinatra::ActiveRecordExtension
   set :session_secret, "my_application_secret"
 end
