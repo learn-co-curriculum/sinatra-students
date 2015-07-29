@@ -1,8 +1,4 @@
----
-tags: student-project, sinatra, activerecord, rspec
-language: ruby
-resources: 3
----
+
 
 # Sinatra Students
 
