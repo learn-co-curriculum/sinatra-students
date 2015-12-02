@@ -186,3 +186,5 @@ Go to town, get 100% coverage, add features, maybe FileUploads through a gem tha
 * [Screencasts](http://screencasts.org/) - [Using ActiveRecord with Sinatra](http://screencasts.org/episodes/activerecord-with-sinatra)
 
 * [Screencasts](http://screencasts.org/) - [Configuring ActiveRecord in Sinatra](http://screencasts.org/episodes/configuring-activerecord-in-sinatra)
+
+<a href='https://learn.co/lessons/sinatra-students' data-visibility='hidden'>View this lesson on Learn.co</a>
