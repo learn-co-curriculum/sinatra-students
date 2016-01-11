@@ -66,7 +66,7 @@ Additionally, you should notice that a coverage report is generated via SimpleCo
 The application is set up to use `guard` to auto-run the test suite on most file saves. Start guard with:
 
 ```bash
-guard
+bundle exec guard
 ```
 
 ## Racking Up the Application
