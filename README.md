@@ -187,4 +187,4 @@ Go to town, get 100% coverage, add features, maybe FileUploads through a gem tha
 
 * [Screencasts](http://screencasts.org/) - [Configuring ActiveRecord in Sinatra](http://screencasts.org/episodes/configuring-activerecord-in-sinatra)
 
-<a href='https://learn.co/lessons/sinatra-students' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-students' title='Sinatra Students'>Sinatra Students</a> on Learn.co and start learning to code for free.</p>
